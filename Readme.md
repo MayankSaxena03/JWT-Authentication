@@ -7,27 +7,22 @@ The project is structured as follows:
 
 go
 
+<pre>
 jwt-authentication-project/
   ├── main.go
-  ├── routes/
-  │   ├── authRouter.go
-  │   └── userRouter.go
-  ├── middleware/
-  │   └── authMiddleware.go
-  ├── database/
-  │   └── databaseConnection.go
+  ├── auth/
+  │   ├── auth.go
+  │   └── jwt.go
   ├── controllers/
-  │   └── userController.go
-  ├── helpers/
-  │   ├── authHelper.go
-  │   └── tokenHelper.go
+  │   ├── user_controller.go
+  │   └── user_routes.go
   ├── models/
   │   └── user.go
-  ├── Postman/
-  │   └── JWT-Authentication.postman_collection.json
-  ├── .env
+  ├── utils/
+  │   └── errors.go
   ├── go.mod
   └── go.sum
+ </pre>
 
   JWT-Authentication.postman_collection.json
 
@@ -45,7 +40,7 @@ Dependencies
 The project depends on the following packages:
 
     github.com/dgrijalva/jwt-go - For generating and validating JWT tokens.
-    github.com/gorilla/mux - For routing HTTP requests.
+    github.com/gin-gonic/gin - For routing HTTP requests.
     golang.org/x/crypto/bcrypt - For hashing passwords.
 
 Usage
