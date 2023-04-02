@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "858604b4-1d03-43fc-a315-e082dc9e8f77",
+		"name": "JWT-Authentication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Mayank Saxena\",\r\n    \"password\":\"Testing123\",\r\n    \"email\":\"testingAPI@golang.com\",\r\n    \"phone\":\"1234567890\",\r\n    \"userType\":\"Admin\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/users/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"testingAPI@golang.com\",\r\n    \"password\":\"Testing123\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjY0MjgyNGUwNDkwZDIxNDdlNGRkNTE2ZCIsIkVtYWlsIjoidGVzdGluZ0FQSUBnb2xhbmcuY29tIiwiVXNlcm5hbWUiOiJNYXlhbmsgU2F4ZW5hIiwiVXNlclR5cGUiOiJBZG1pbiIsImV4cCI6MTY4MDM1NzY3NX0.iHnDstqffFBWWLra0c34jZnerj7Ra2MGyhw754IvMUY",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjY0MjgyNGUwNDkwZDIxNDdlNGRkNTE2ZCIsIkVtYWlsIjoidGVzdGluZ0FQSUBnb2xhbmcuY29tIiwiVXNlcm5hbWUiOiJNYXlhbmsgU2F4ZW5hIiwiVXNlclR5cGUiOiJBZG1pbiIsImV4cCI6MTY4MDM1ODA3OX0.53QeCO5UhpFQB3c89uFk1hJ1oHRcJn8IZwHSAvZtLlU",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/users/642824e0490d2147e4dd516d",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"642824e0490d2147e4dd516d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
