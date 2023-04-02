@@ -5,8 +5,7 @@ Project Structure
 
 The project is structured as follows:
 
-go
-
+<pre>
 jwt-authentication-project/
   ├── main.go
   ├── routes/
@@ -28,8 +27,7 @@ jwt-authentication-project/
   ├── .env
   ├── go.mod
   └── go.sum
-
-  JWT-Authentication.postman_collection.json
+</pre>
 
     main.go - The entry point of the application.
     routes/ - Contains the authentication-related code, including generating and validating JWT tokens.
